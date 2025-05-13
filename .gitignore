@@ -3,6 +3,7 @@
 #server
 /server/public/files
 /server/public/user_images
+/server/logs/
 
 
 # dependencies
