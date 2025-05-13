@@ -1,5 +1,7 @@
 import Link from "next/link";
 import LoginForm from "@/components/common/LoginForm";
+import { Suspense } from "react";
+import Spinner from "@/components/spinner/Spinner";
 
 export const metadata = {
     title: "Login",
@@ -12,10 +14,12 @@ export default function Login() {
             <div className="bg-white shadow-md rounded-lg p-8 w-96">
                 <h2 className="text-2xl font-semibold text-gray-800 text-center">Login</h2>
                 <p className="text-gray-500 text-center text-sm mt-2">
-                    Don't have an account yet? <Link href="/signup" className="text-purple-600 font-medium">Sign Up</Link>
+                    Don&#39;t have an account yet? <Link href="/signup" className="text-purple-600 font-medium">Sign Up</Link>
                 </p>
  
-                <LoginForm/>
+                <Suspense fallback={<Spinner/>}>
+                    <LoginForm/>
+                </Suspense>
             </div>
         </div>
     );

@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import Signup from "./components/Signup";
+import Loader from "@/components/spinner/Loader";
 
 export const metadata = {
     title: "sign up",
@@ -9,7 +11,9 @@ export default function signup(){
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white shadow-md rounded-lg p-8 w-96">
-                <Signup/>
+                <Suspense fallback={<Loader/>}>
+                    <Signup/>
+                </Suspense>
             </div>
         </div>
     )

@@ -27,7 +27,7 @@ export default function Home() {
           </h2>
           <p className="text-gray-700 text-base md:text-lg">
             safesubmit.in empowers you to collect data effortlessly—no backend, no complex setup.
-            Whether you're a developer, freelancer, or business owner, simply integrate our solution and start receiving form submissions instantly.
+            Whether you&#39;re a developer, freelancer, or business owner, simply integrate our solution and start receiving form submissions instantly.
           </p>
           <ul className="space-y-4 mt-4">
             <li className="flex items-start gap-3 text-gray-600">

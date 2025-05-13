@@ -1,14 +1,14 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { useSearchParams } from 'next/navigation';
 import UpdatePassword from './UpdatePassword';
 import apiHandler from '@/utils/apiHandler';
+import { useSearchParams } from 'next/navigation';
 
 const ResetPassword = () => {
     const searchParams = useSearchParams();
-    const resetToken = searchParams.get("resetToken");
-    const email = searchParams.get("email");
+      const resetToken = searchParams.get("resetToken");
+      const email = searchParams.get("email");
     const [isSentMail, setIsSentMail] = useState(false);
     const [apiError, setApiError] = useState('');
 

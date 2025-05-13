@@ -37,12 +37,12 @@ export default function FeaturesPage() {
   ];
 
   return (
-    <main className="w-full px-6 md:px-10 py-16 flex flex-col items-center">
+    <div className="w-full px-6 md:px-10 py-16 flex flex-col items-center">
       <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">
         Powerful Features That Simplify Form Submissions
       </h1>
       <p className="text-gray-600 text-center max-w-2xl mt-4 text-base md:text-lg">
-        Whether you're building a portfolio, running a campaign, or launching a startup,
+        Whether you&#39;re building a portfolio, running a campaign, or launching a startup,
         safesubmit.in has everything you need to manage forms without code.
       </p>
 
@@ -58,6 +58,6 @@ export default function FeaturesPage() {
           </div>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

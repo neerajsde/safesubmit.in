@@ -1,4 +1,4 @@
-export default  [ 
+const countryCodes =  [ 
     {
         "country": "India",
         "code": "+91"
@@ -780,3 +780,5 @@ export default  [
         "code": "+263"
     }
 ]
+
+export default countryCodes;
