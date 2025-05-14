@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function settings(){
     return (
-        <div className='w-full min-h-screen'>
+        <div className='w-full p-2 md:p-4 min-h-screen'>
             <MainSetting/>
         </div>
     )

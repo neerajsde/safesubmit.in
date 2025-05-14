@@ -39,17 +39,17 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full px-6 md:px-10 py-16 flex flex-col items-center justify-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+    <section className="w-full p-4 md:p-6 lg:py-16 flex flex-col items-center justify-center">
+      <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
         Contact Us
       </h2>
-      <p className="text-gray-600 text-center mt-4 max-w-xl">
+      <p className="text-gray-600 text-center mt-2 md:mt-4 max-w-xl">
         Have a question or want to work with us? Send us a message and we’ll get back to you soon!
       </p>
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-xl mt-10 bg-white rounded-xl p-6 shadow-lg space-y-6"
+        className="w-full max-w-xl mt-10 bg-white rounded-xl p-4 md:p-6 shadow-lg space-y-6"
       >
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>

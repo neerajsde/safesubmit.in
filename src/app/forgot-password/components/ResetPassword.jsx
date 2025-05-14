@@ -59,9 +59,9 @@ const ResetPassword = () => {
     }
 
     return (
-        <div className='w-full h-[90vh] flex justify-center items-center bg-gray-100'>
-            <form onSubmit={handleSubmit(submitEmail)} className='bg-white shadow-md rounded-lg p-8 gap-4 w-96 flex flex-col'>
-                <h1 className='text-center text-2xl'>Reset Your Password</h1>
+        <div className='w-full h-[90vh] p-2 md:p-4 flex justify-center items-center bg-gray-100'>
+            <form onSubmit={handleSubmit(submitEmail)} className='bg-white shadow-md rounded-lg p-4 md:p-6 lg:p-8 gap-4 w-96 flex flex-col'>
+                <h1 className='text-center text-xl md:text-2xl'>Reset Your Password</h1>
                 {apiError && <div className='py-1 px-2 border rounded-sm border-red-500 text-red-500 text-sm'>{apiError}</div>}
                 <div>
                     <label className="text-gray-700 text-sm font-medium">Email<span className='text-red-500'>*</span></label>

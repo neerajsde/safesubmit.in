@@ -41,8 +41,8 @@ const UserMenu = ({ user }) => {
     if (res.success) {
       setOpen(false);
       localStorage.removeItem('authToken');
-      dispatch(logout());
       router.push("/login");
+      dispatch(logout());
     }
     setLoading(false);
   };
@@ -56,12 +56,12 @@ const UserMenu = ({ user }) => {
       <button
         onClick={toggleMenu}
         type="button"
-        className="inline-flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none transition-all"
+        className="inline-flex items-center gap-1 md:gap-2 px-2 md:px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none transition-all"
         aria-haspopup="true"
         aria-expanded={open}
       >
-        <FaUserCircle className="text-xl" />
-        <span className="text-sm font-semibold">{user?.name}</span>
+        <FaUserCircle className="text-lg md:text-xl" />
+        <span className="text-sm font-semibold hidden md:block">{user?.name}</span>
         <IoIosArrowDown
           className={`transition-transform text-base duration-200 ${
             open ? "rotate-180" : ""

@@ -74,7 +74,7 @@ export default function HomeHero() {
 
       {/* 🌟 Hero Text */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
+        className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -84,7 +84,7 @@ export default function HomeHero() {
 
       {/* 📄 Description */}
       <motion.p
-        className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl"
+        className="mt-6 max-sm:text-justify text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -103,7 +103,7 @@ export default function HomeHero() {
       >
         <Link
           href="/documentation"
-          className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold text-lg shadow-md transition"
+          className="px-4 md:px-6 py-2 md:py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold text-base md:text-lg shadow-md transition"
         >
           Get Started →
         </Link>

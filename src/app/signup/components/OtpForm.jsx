@@ -4,8 +4,11 @@ import { redirect } from "next/navigation";
 import React, { useState, useRef, useEffect } from "react";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { FaAngleLeft } from "react-icons/fa6";
+import { useAppDispatch } from "@/lib/store/hooks/hook";
+import { fetchUser } from "@/lib/store/features/user/AuthSlice";
 
 const OtpForm = ({formData, setIsSendOtp}) => {
+  let dispatch = useAppDispatch();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [otp, setOtp] = useState("");
@@ -52,6 +55,23 @@ const OtpForm = ({formData, setIsSendOtp}) => {
     }
   };
 
+  async function loginHandler(){
+    const payload = {
+      email: formData.email,
+      password: formData.password,
+    };
+    const response = await apiHandler("/auth/login", "POST", false, payload);
+    // console.log("response: ", response);
+    if (!response.success) {
+      setError(response.message);
+      redirect("/login");
+    } else {
+      localStorage.setItem("authToken", response.data.token);
+      dispatch(fetchUser());
+      redirect("/dashboard");
+    }
+  }
+
   async function submitHandler(){
     if(otp.length < 6){
       return;
@@ -59,7 +79,7 @@ const OtpForm = ({formData, setIsSendOtp}) => {
     setLoading(true);
     let response = await apiHandler("/user", "POST", false, {...formData, otp});
     if(response.success){
-      redirect('/');
+      await loginHandler();
     }
     else{
       setError(response.message);

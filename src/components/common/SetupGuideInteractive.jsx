@@ -138,19 +138,19 @@ const SetupGuideInteractive = () => {
   }
 
   return (
-    <div className="w-full border p-6 mt-8 bg-white rounded-xl shadow-lg">
+    <div className="w-full border p-4 md:p-6 mt-4 md:mt-8 bg-white rounded-xl shadow-lg">
       <div className="mb-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">🚀 Setup Guide</h2>
-        <p className="text-gray-500">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">🚀 Setup Guide</h2>
+        <p className="text-gray-500 text-sm md:text-base">
           Step {currentStep + 1} of {steps.length}
         </p>
       </div>
 
       <div className="relative border-l-4 border-blue-500 pl-4 pb-4">
         <CheckCircle className="absolute -left-[14px] top-1 text-blue-500 bg-white" />
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
-        <p className="text-gray-600 mb-4">{step.description}</p>
-        <button onClick={() => btnHandler(step.url)} className="bg-blue-600 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+        <h3 className="text-base md:text-lg lg:text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
+        <p className="text-gray-600 text-sm md:text-base lg:text-lg mb-2 md:mb-4">{step.description}</p>
+        <button onClick={() => btnHandler(step.url)} className="bg-blue-600 cursor-pointer text-sm md:text-base text-white px-2 md:px-4 py-1 md:py-2 rounded-lg hover:bg-blue-700">
           {step.buttonText}
         </button>
       </div>
@@ -159,7 +159,7 @@ const SetupGuideInteractive = () => {
         <button
           onClick={prevStep}
           disabled={isFirst}
-          className={`flex items-center cursor-pointer gap-2 px-4 py-2 rounded-lg transition ${
+          className={`flex items-center cursor-pointer gap-1 md:gap-2 px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-lg transition ${
             isFirst
               ? "bg-gray-300 cursor-not-allowed"
               : "bg-gray-200 hover:bg-gray-300"
@@ -169,7 +169,7 @@ const SetupGuideInteractive = () => {
           Back
         </button>
 
-        <div className="w-full h-2 bg-gray-200 rounded-full mx-4 overflow-hidden">
+        <div className="w-full h-1 md:h-2 bg-gray-200 rounded-full mx-4 overflow-hidden">
           <div
             className="h-full bg-blue-500 transition-all"
             style={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
@@ -179,7 +179,7 @@ const SetupGuideInteractive = () => {
         <button
           onClick={nextStep}
           disabled={isLast}
-          className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg transition ${
+          className={`flex items-center gap-1 md:gap-2 cursor-pointer px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-lg transition ${
             isLast
               ? "bg-gray-300 cursor-not-allowed"
               : "bg-blue-600 text-white hover:bg-blue-700"

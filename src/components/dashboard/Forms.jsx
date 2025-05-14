@@ -70,7 +70,7 @@ const Forms = () => {
   }, []);
 
   return (
-    <div className="w-full p-4 sm:p-8 min-h-screen bg-gray-100">
+    <div className="w-full mt-4 min-h-screen bg-gray-100">
       {editForm.falg && (
         <EditFormComponent
           data={editForm.data}
@@ -80,15 +80,15 @@ const Forms = () => {
       )}
 
       <div className="w-full flex justify-between items-center mb-6">
-        <h1 className="text-2xl md:text-5xl font-bold text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
           Yours Forms
         </h1>
 
         <button
           onClick={() => setShowModal(true)}
-          className="cursor-pointer bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+          className="cursor-pointer text-sm md:text-base bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
         >
-          + Create New Form
+          Create New Form
         </button>
 
         {showModal && (
@@ -117,7 +117,7 @@ const Forms = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition-shadow"
+                className="bg-white shadow-md rounded-2xl p-4 md:p-6 hover:shadow-xl transition-shadow"
               >
                 <div className="w-full flex justify-between items-center mb-4">
                   <Link

@@ -94,10 +94,10 @@ const MainSetting = () => {
       <div className="bg-white p-4 shadow rounded space-y-2">
         <p><strong>User ID:</strong> {userData?.userId}</p>
 
-        <div className="flex items-center gap-2">
-          <p>
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
+          <p className="w-full overflow-hidden text-ellipsis whitespace-nowrap">
             <strong>API Key:</strong>{" "}
-            {showKey ? userData.api_key : "••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"}
+            {showKey ? userData.api_key : "•••••••••••••••••••••••••••••••••••••••"}
           </p>
           <button
             className="text-blue-600 cursor-pointer text-sm underline"

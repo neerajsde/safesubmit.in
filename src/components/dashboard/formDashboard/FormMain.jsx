@@ -61,12 +61,12 @@ const FormMain = () => {
           onClick={() => window.history.back()}
           className="flex items-center gap-2 cursor-pointer px-3 py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
         >
-          <FaArrowLeft className="text-lg" />
-          <span className="text-base font-medium">Back</span>
+          <FaArrowLeft className="text-base md:text-lg" />
+          <span className="text-base font-medium hidden md:block">Back</span>
         </button>
 
         {/* Page Title */}
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">{name}</h1>
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800">{name}</h1>
       </div>
 
       <section className="mb-8">

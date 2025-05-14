@@ -163,22 +163,22 @@ const APIDocumentation = () => {
   };
 
   return (
-    <div className="w-full border p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-3xl font-bold mb-6">
+    <div className="w-full border p-4 md:p-6 bg-white shadow-lg rounded-lg">
+      <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6">
         📨 API Documentation: Submit Form
       </h2>
 
       <div className="mb-6 space-y-2">
         <p>
-          <strong>Endpoint:</strong>{" "}
-          <code className="bg-gray-100 px-2 py-1 rounded">
+          <strong className="text-sm md:text-base">Endpoint:</strong>{" "}
+          <code className="bg-gray-100 px-2 py-1 rounded text-xs md:text-base">
             POST /api/v1/form-submission
           </code>
         </p>
         <p>
-          <strong>Required Headers:</strong>
+          <strong  className="text-sm md:text-base">Required Headers:</strong>
         </p>
-        <ul className="list-disc list-inside ml-4">
+        <ul className="list-disc list-inside ml-4 text-sm md:text-base">
           <li>
             <code>x-api-key</code>: Your API key
           </li>
@@ -189,14 +189,14 @@ const APIDocumentation = () => {
             <code>Content-Type</code>: <code>application/json</code>
           </li>
         </ul>
-        <p>
+        <p  className="text-sm md:text-base">
           <strong>Body Fields:</strong> <code>name</code>, <code>email</code>,{" "}
           <code>subject</code>, <code>message</code>
         </p>
       </div>
 
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-2">💻 Code Examples</h3>
+        <h3 className="text-lg md:text-xl font-semibold mb-2">💻 Code Examples</h3>
         <div className="flex gap-2 mb-4 flex-wrap">
           {languages.map((lang) => (
             <button
@@ -220,15 +220,15 @@ const APIDocumentation = () => {
           >
             {copied ? "Copied!" : "Copy"}
           </button>
-          <pre className="bg-gray-900 text-white text-sm p-4 rounded-lg overflow-auto whitespace-pre-wrap">
+          <pre className="bg-gray-900 text-white text-xs md:text-sm p-2  md:p-4 rounded-lg overflow-auto whitespace-pre-wrap">
             <code>{codeSnippets[selectedLang]}</code>
           </pre>
         </div>
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold mb-2">📦 Example Response</h3>
-        <pre className="bg-gray-100 text-sm p-4 rounded-lg text-gray-800">
+        <h3 className="text-lg md:text-xl font-semibold mb-2">📦 Example Response</h3>
+        <pre className="bg-gray-100 text-xs md:text-sm p-2 md:p-4 rounded-lg text-gray-800">
           {`{
   "success": true,
   "message": "Form submitted successfully"

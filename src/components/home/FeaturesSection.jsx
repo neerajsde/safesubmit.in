@@ -37,21 +37,21 @@ export default function FeaturesSection() {
   return (
     <section className="w-full">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        <h2 className="text-xl md:text-2xl lg:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           Powerful Features for Effortless Forms
         </h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-600 mb-4 md:mb-8 lg:mb-12 max-w-2xl mx-auto max-sm:text-justify text-sm md:text-base lg:text-lg">
           safesubmit.in is packed with everything you need to launch and manage simple yet powerful forms—no backend, no fuss.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl shadow-md bg-white hover:shadow-lg transition duration-300 text-left"
+              className="p-4 md:p-6 rounded-xl shadow-md bg-white hover:shadow-lg transition duration-300 text-left"
             >
               <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-base md:text-lg lg:text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
+              <p className="text-gray-600 text-sm md:text-base lg:text-lg">{feature.description}</p>
             </div>
           ))}
         </div>

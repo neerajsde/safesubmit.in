@@ -145,15 +145,15 @@ const MainProfile = () => {
           />
         </div>
 
-        <div className="flex gap-4">
-          <div className="w-1/3">
+        <div className="flex gap-2 md:gap-4">
+          <div className="w-1/2 md:w-1/3">
             <label className="block mb-1 font-medium">Country Code</label>
             <select
               type="text"
               name="country_code"
               value={formData.country_code}
               onChange={handleChange}
-              className="w-full border px-3 py-2 rounded"
+              className="w-full border px-2 md:px-3 py-2 rounded"
               required
             >
               {contryCodes ? contryCodes.map((code,i) => (

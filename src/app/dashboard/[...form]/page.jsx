@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function FormPage() {
     return (
-        <div className="w-full min-h-screen flex flex-col gap-4">
+        <div className="w-full p-2 md:p-4 min-h-screen flex flex-col gap-4">
             <FormMain/>
         </div>
     );
