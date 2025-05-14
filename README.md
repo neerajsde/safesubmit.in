@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SafeSubmit.in
 
-## Getting Started
+**SafeSubmit.in** is a secure and scalable submission management system designed for handling digital submissions in educational or organizational settings. Built with a modern tech stack including **Next.js**, **Node.js**, **MySQL**, **Redis**, **Docker**, and **React.js**, this application ensures fast performance, reliable data handling, and a seamless user experience.
 
-First, run the development server:
+## 🌐 Live Demo
+
+🔗 [safesubmitin.vercel.app](https://safesubmitin.vercel.app/)
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:** React.js, Next.js (App Router)
+- **Backend:** Node.js (Express.js)
+- **Database:** MySQL
+- **Caching & Sessions:** Redis, JWT (JSON Web Tokens)
+- **File Uploads:** Multer (for handling multipart/form-data)
+- **Containerization:** Docker
+- **Deployment:** Vercel (Frontend), Railway / Dockerized Backend (assumed)
+
+---
+
+## ✨ Features
+
+- 🔐 **Secure Authentication**  
+  Role-based authentication system with session management powered by Redis.
+
+- 📤 **Submission Uploads**  
+  Users can securely upload documents/files (e.g., assignments, reports, etc.) with size and type validations.
+
+- 📁 **Organized Submissions**  
+  Submissions are stored and categorized based on user, subject, or department for easy retrieval.
+
+- 🔍 **Search & Filter**  
+  Faculty and admin users can easily search and filter submissions by various criteria.
+
+- 🐳 **Dockerized Setup**  
+  Fully containerized using Docker for smooth development and deployment.
+
+- ⚡ **Optimized Performance**  
+  Redis caching for faster data access and reduced DB load.
+
+---
+
+## 📷 Screenshots
+
+![Screenshot 1](https://res.cloudinary.com/do1xweis7/image/upload/v1747217392/Screenshot_2025-05-14_153858_uxgz87.png)
+![Screenshot 1](https://res.cloudinary.com/do1xweis7/image/upload/v1747217392/Screenshot_2025-05-14_153842_hm4ctm.png)
+
+---
+
+## 🛠️ Installation & Development
+
+### Prerequisites
+
+- Node.js
+- Docker
+- MySQL Server (if not using Docker)
+- Redis Server (or Dockerized)
+
+### Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/neerajsde/safesubmitin.git
+cd safesubmit.in
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
